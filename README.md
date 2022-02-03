@@ -1,2 +1,1 @@
-# EasyLife
 # EasyLifeV2
