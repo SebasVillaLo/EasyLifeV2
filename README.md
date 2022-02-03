@@ -1,5 +1,7 @@
 # EasyLifeV2
 Hola, les presento mi nuevo script, a continuacion les mostrare todos los pasos a seguir para que realicen la instalacion y como usarlo.
+El objetivo del script es crear carpeta con los archivos que tu desees, ademas de eso te crea el README y va tener de contenido el nombre de la carpeta
+los archivos van a llevar permisos 755 o a+x para que sea ejecutable en todos los usuarios.
 #
 Primero debemos hacer un clone al repo desde la raiz de tu escritorio
 ![](https://cdn.discordapp.com/attachments/930561470662606888/938664185166962688/unknown.png)
