@@ -8,29 +8,29 @@ from colorama import init, Fore
 try:
     init()
     todosArchivos = []
-    print(Fore.BLUE+"Bienvenido, espero sea se tu agrado mi primer script. :D\n")
+    print(Fore.BLUE+"Welcome, I hope you like my first script. :D\n")
     print(Fore.YELLOW+"-----------------------------------------------------------------\n")
-    print(Fore.BLUE+"Asegurate de estar en la carpeta donde vas a crear la carpeta y los archivos")
-    print(Fore.BLUE+"Ya sea el low level, el higher level o en la carpeta que gustes.")
+    print(Fore.BLUE+"Make sure you are in the folder where you are going to create the folder and files.")
+    print(Fore.BLUE+"Either the low level, the higher level or in the folder of your choice.")
     print(Fore.YELLOW+"\n-----------------------------------------------------------------\n")
-    print(Fore.RED+"Ingrese a continuacion el nombre de la carpeta donde van todos los archivos Ejem: (0x15-python_hola)")
+    print(Fore.RED+"Enter below the name of the folder where all the files go Ex: (0x15-python_hello)")
     path = input(Fore.GREEN+"\n~ ").lower().strip("/")
     if exists(path) == False:
         subprocess.run(["mkdir", path])
     else:
-        print(Fore.RED+'\nEste directorio ya existe, quieres que se cree uno vacio? (Si o No)\n')
+        print(Fore.RED+'\nThis directory already exists, do you want an empty directory to be created? (Yes or No)\n')
         res = input(Fore.GREEN+"~ ")
         res.lower()
         if res == 'si':
             subprocess.run(["rm", "-rf", path])
             subprocess.run(["mkdir", path])
         elif (res == 'no'):
-            print(Fore.BLUE+"\nVale, trabajaremos con el que ya existe")
+            print(Fore.BLUE+"\nOkay, we will work with the existing one")
     print(Fore.YELLOW+"-----------------------------------------------------------------\n")
-    print(Fore.BLUE+"Ingrese el nombre de los archivos (por cada nombre presiona un enter, si ya terminaste, da enter)\n")
-    print(Fore.MAGENTA+"Para eliminar el ultimo archivo ingresado, escriba 'del' ")
-    print(Fore.MAGENTA+"Si pusiste un archivo repetido, no te preocupes que se elimina solito :3")
-    print(Fore.RED+"\n -- El README te lo hago yo :D -- \n")
+    print(Fore.BLUE+"Enter the name of the files (for each name press enter, if you are done, press enter).\n")
+    print(Fore.MAGENTA+"To delete the last file entered, type 'del'. ")
+    print(Fore.MAGENTA+"If you put a repeated file, don't worry, it will delete itself :3")
+    print(Fore.RED+"\n -- The README I do it for you :D -- \n")
     pathv2 = path + "/"
     readme = pathv2 + 'README.md'
     while True:
@@ -45,9 +45,9 @@ try:
         else:
             index = todosArchivos[-1]
             todosArchivos.remove(index)
-            print(Fore.MAGENTA+f"\nEl siguiente archivo ha sido eliminado {index}")
+            print(Fore.MAGENTA+f"\nThe following file has been deleted {index}")
     print(Fore.YELLOW+"-----------------------------------------------------------------\n")
-    print(Fore.MAGENTA+f"Quieres que tus archivos tengan el PATH? Ejem: (#!/usr/bin/node)")
+    print(Fore.MAGENTA+f"Do you want your files to have the PATH? Exem: (#!/usr/bin/node)")
     comentario = input(Fore.GREEN+"\n~ ")
     for i in range(len(todosArchivos)):
         if len(comentario) > 0:
@@ -62,8 +62,8 @@ try:
     f.write(path)
     f.close()
     os.system('clear')
-    print(Fore.BLUE+"Graicas por usar mi Script :D\n")
-    print(Fore.BLUE+"Todo se ha creado correctamente")
+    print(Fore.BLUE+"Thanks for using my script :D\n")
+    print(Fore.BLUE+"Everything has been created correctly")
 except KeyboardInterrupt:
     os.system("clear")
-    print(Fore.BLUE+"Se cerro el script")
+    print(Fore.BLUE+"Script closed")
